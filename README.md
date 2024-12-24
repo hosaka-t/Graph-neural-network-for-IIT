@@ -19,7 +19,7 @@ Due to the file size, the dataset can be downloaded from [Zenodo](https://zenodo
 - Excel files in this folder are included for reference only.
 
 #### 3. `prelearned_model`
-- This folder contains 100 pre-trained GNN models, trained during the first experiment using the proposed method
+- This folder contains 100 pre-trained GNN models, trained during the first experiment using the proposed method.
 - Input statistics (mean and standard deviation) are also provided.
 
 #### Workflow for `random_graph_data_non_extrapolative_setting` and `random_graph_data_extrapolative_setting`
