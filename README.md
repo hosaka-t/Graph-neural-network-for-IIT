@@ -26,7 +26,7 @@ Due to the file size, the dataset can be downloaded from [Zenodo](https://zenodo
 1. Execute `graph_neural_network_for_IIT.ipynb`:
    - The program reads and processes summary files and meta-information.
      
-### Workflow for `random_graph_data_N=100`
+#### Workflow for `random_graph_data_N=100`
 1. Execute `graph_neural_network_for_IIT.ipynb`:
    - The program utilizes both the pickle files from `random_graph_data_N=100` and the pre-trained models from `prelearned_model` for processing.
 2. Summarize results:
