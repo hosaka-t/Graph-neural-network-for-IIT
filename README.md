@@ -6,11 +6,11 @@ Due to the file size, the dataset can be downloaded from [https://zenodo.org/rec
 
 #### 1. `random_graph_data_non_extrapolative_setting` and `random_graph_data_extrapolative_setting`
 - These folders, located in the same directory as the Jupyter Notebook files, contain the graph data used for the first and second experiments, respectively.
-- Each folder includes subdirectories (`N=*_meta`) organized by the value of \(N\), storing the following meta-information for each system:
+- Each folder includes subdirectories (`N=*_meta`) organized by the value of $N$, storing the following meta-information for each system:
   - Node connections
   - Edge values
   - Node states
-  - The value of \(T\)
+  - The value of $T$
 - Each folder also contains `summary_N=*.csv` files summarizing the corresponding data.
 
 #### 2. `random_graph_data_N=100`
