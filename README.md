@@ -14,8 +14,8 @@ Due to the file size, the dataset can be downloaded from [https://zenodo.org/rec
 - Each folder also contains `summary_N=*.csv` files summarizing the corresponding data.
 
 #### 2. `random_graph_data_N=100`
-- This folder contains the graph data used in experiments with \(N=100\).
-- Files are organized by the value of \(p_e\), with each pickle file including 100 test systems:
+- This folder contains the graph data used in experiments with $N=100$.
+- Files are organized by the value of $p_e$, with each pickle file including 100 test systems:
   - The first 50 systems are entirely dense graphs, where each pair of nodes is connected with a probability of 0.4. These systems are not described in the paper.
   - The second 50 systems are the split-brain-like systems analyzed in the paper.
 - Excel files in this folder are included for reference only.
@@ -24,6 +24,24 @@ Due to the file size, the dataset can be downloaded from [https://zenodo.org/rec
 - This folder contains 100 pre-trained GNN models, trained during the first experiment using the proposed method.
 - Input statistics (mean and standard deviation) are also provided.
 
+#### 4. `random_graph_data_{tree-like_N=4-10, fully-conncetd_N=4-7, loop-containing_N=4-7}`
+- These folders contain the graph data used to examine the scaling behvior for small $N$.
+- Each folder includes subdirectories (`N=*_meta`) organized by the value of $N$, storing the following meta-information for each system:
+  - Node connections
+  - Edge values
+  - Node states
+  - The value of $T$
+- Each folder also contains `summary_N=*.csv` files summarizing the corresponding data.
+
+#### 5. `three_topologies_data_N=10-100`
+- This folder contains the graph data used for scaling behavior experiments with $N=10-100$ across three topologies.
+- Files are organized by the value of $N$, and each pickle file contains 30 test systems:
+  - The first 10 are tree-like systems.
+  - The next 10 are loop-containing systems.
+  - The final 10 are fully connected systems.
+- Excel files in this folder are included for reference only.
+
+  
 #### Workflow for `random_graph_data_non_extrapolative_setting` and `random_graph_data_extrapolative_setting`
 1. Execute `graph_neural_network_for_IIT.ipynb`:
    - The program reads and processes summary files and meta-information.
@@ -33,3 +51,9 @@ Due to the file size, the dataset can be downloaded from [https://zenodo.org/rec
    - The program utilizes both the pickle files from `random_graph_data_N=100` and the pre-trained models from `prelearned_model` for processing.
 2. Summarize results:
    - After executing the first step, use `bigN_result_processing.ipynb` to summarize the output results.
+  
+#### Workflow for `three_topologies_data_N=10-100`
+1. Execute `graph_neural_network_for_IIT.ipynb`:
+   - The program utilizes both the pickle files from `three_topologies_data_N=10-100` and the pre-trained models from `prelearned_model` for processing.
+2. Generate graphs:
+   - After completing the first step, run `three_topologies_N=10-100_result_processing.py` to generate graphs showing the estimated values of $\Phi$ and the major complex ratio with respect to $N$.
