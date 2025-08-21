@@ -1,6 +1,7 @@
 This repository provides the programs and a link to the dataset used in the paper titled "Graph neural networks for integrated information and major complex estimation."
 
 Due to the file size, the dataset can be downloaded from [https://zenodo.org/records/14551717](https://zenodo.org/records/14551717). 
+Please make sure to download both Version 1 and Version 2, as the data in the two versions do not overlap.
 
 ### Folder Structure and Data Contents
 
